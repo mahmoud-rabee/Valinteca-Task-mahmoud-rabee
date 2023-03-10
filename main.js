@@ -6,7 +6,6 @@ const quick_view_modal = document.querySelector(".quick_view_modal");
 const close_icon = document.querySelector(".close_icon");
 const cart_indecator = document.querySelector(".cart_indecator");
 
-
 //Array of Products
   const products = [
     {
@@ -53,7 +52,7 @@ const cart_indecator = document.querySelector(".cart_indecator");
     },
     ]
   
-  //Display the Products on the Page
+  //Display the Products on the Page.
   function displayProducts() {
     let product_elements = products.map(function(item, i) {
       return `
@@ -74,7 +73,7 @@ const cart_indecator = document.querySelector(".cart_indecator");
   }
   displayProducts()
   
-  //Open and close the Dropdown when the user clicks on the cart icon
+  //Open and close the Dropdown when the user clicks on the cart icon.
   cart_icon.onclick = function() {
     dropdown.classList.toggle("show");
   }
@@ -146,7 +145,6 @@ const cart_indecator = document.querySelector(".cart_indecator");
     }
     cart_indecator.innerHTML = cart_products.length;
   }
-  
  showCartProducts()
  
   //Create a quick_view modal which opens when the user clicks on the quick_view button of any product.
@@ -171,7 +169,7 @@ const cart_indecator = document.querySelector(".cart_indecator");
     quick_view_modal.style.display = "none";
   }
   
-  //Add Current Product to The Cart when The user Clicks on the add to cart button in the quick_view modal
+  //Add Current Product to The Cart when The user Clicks on the add to cart button in the quick_view modal.
   function addCurrentPro(index) {
       let a = document.querySelector(".a");
       if (a.innerHTML == "Add To Cart") {
