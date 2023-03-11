@@ -31,7 +31,7 @@ const cart_indecator = document.querySelector(".cart_indecator");
     },
     {
       id: 4,
-      product_name: "Bla bla bla bla",
+      product_name: "The Unknown Men",
       product_price: "35.5",
       product_image: "assets/product-04.jpg",
       add_to_cart: false,
@@ -114,6 +114,7 @@ const cart_indecator = document.querySelector(".cart_indecator");
   
   //Get the Cart Products from LocalStorage and Show it in the Dropdown and Show the Cart indecator.
   function showCartProducts() {
+    if (cart_products.length) {
    dropdown.innerHTML = `
           <table style="background-color: lightgray; width: 100%;" class="table">
             <thead>
@@ -137,11 +138,11 @@ const cart_indecator = document.querySelector(".cart_indecator");
             </tr>
           </tbody>
             `
-          }
-    if (!cart_products.length) {
-      cart_indecator.style.display = "none";
+    }
+    cart_indecator.style.display = "inline";
     } else {
-      cart_indecator.style.display = "inline";
+      dropdown.innerHTML = "Your Cart Is Empty";
+      cart_indecator.style.display = "none";
     }
     cart_indecator.innerHTML = cart_products.length;
   }
