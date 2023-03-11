@@ -145,7 +145,12 @@ const cart_indecator = document.querySelector(".cart_indecator");
     }
     cart_indecator.innerHTML = cart_products.length;
   }
- showCartProducts()
+ showCartProducts();
+ 
+ //Save The Buttons Statue based on adding or removing from the cart.
+   cart_products.forEach((e, i) => {
+     arr_of_btns[e.id - 1].innerHTML = localStorage.in;
+   })
  
   //Create a quick_view modal which opens when the user clicks on the quick_view button of any product.
   function openAqVm(i) {
