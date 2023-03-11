@@ -189,11 +189,10 @@ const cart_indecator = document.querySelector(".cart_indecator");
       a.innerHTML = localStorage.in;
       } else {
         a.innerHTML = "Add To Cart"
-        localStorage.setItem("in", a.innerHTML)
+        localStorage.setItem("in", a.innerHTML);
         arr_of_btns[index].innerHTML = localStorage.in;
 
-      let filtered_products = cart_products.filter(product => product.id == a.id)
-      
+      let filtered_products = cart_products.filter(product => product.id != (parseInt(a.id)+1));
       cart_products = filtered_products
       localStorage.cart_products = JSON.stringify(cart_products);
             showCartProducts()
